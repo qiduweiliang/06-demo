@@ -15,7 +15,7 @@ import axios from 'axios';
   export {searchGit};
 
    function getJson() {
-     let address = `https://raw.githubusercontent.com/qiduweiliang/demodata/master/card.json`;
+     let address = `https://raw.githubusercontent.com/qiduweiliang/demodata/master/card.json?${Math.random()}`;
      return axios.get(address)
        .then( (res) => (
          { getJson:res.data }
