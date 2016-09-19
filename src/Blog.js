@@ -3,6 +3,7 @@ import { getBlog } from './utils/helpers';
 import marked from 'marked';
 import higl from 'highlight.js';
 
+
 class Blog extends React.Component {
   constructor(){
      super();
@@ -30,7 +31,7 @@ class Blog extends React.Component {
     let content = this.state.wait? '请稍等' : marked(this.state.data);
     return(
       <div>
-        <div dangerouslySetInnerHTML={{__html:content}} />
+        <div dangerouslySetInnerHTML={{__html:content}} className="post-content" />
       </div>
     )
   }
