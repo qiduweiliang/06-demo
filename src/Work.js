@@ -4,6 +4,7 @@ import Card from './components/Card';
 import Bg from './image/home1.jpg';
 import { getJson } from './utils/helpers';
 
+
 class Work extends React.Component {
   constructor(){
      super();
@@ -20,7 +21,6 @@ class Work extends React.Component {
            data:recData.getJson,
            wait:false
          })
-         console.log(this.state.data);
        });
    }
   render () {

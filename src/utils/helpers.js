@@ -12,8 +12,6 @@ import axios from 'axios';
       });
   }
 
-  export {searchGit};
-
    function getJson() {
      let address = `https://raw.githubusercontent.com/qiduweiliang/demodata/master/card.json?${Math.random()}`;
      return axios.get(address)
@@ -25,4 +23,15 @@ import axios from 'axios';
        });
    }
 
-export { getJson };
+   function getBlog(add) {
+     let address = `https://raw.githubusercontent.com/qiduweiliang/demodata/master/blog/${add}.md`;
+     return axios.get(address)
+       .then( (res) => (
+         { getBlog:res.data }
+       ))
+       .catch(function (error) {
+         alert(error);
+       });
+   }
+
+export { searchGit,getJson,getBlog};
