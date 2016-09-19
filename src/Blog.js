@@ -19,7 +19,6 @@ class Blog extends React.Component {
            data:recData.getBlog,
            wait:false
          })
-         console.log(this.state.data);
        });
    }
   render () {
